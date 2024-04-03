@@ -1,0 +1,18 @@
+## Interface: 100205
+
+## Title: |cFF1E90FFBloom Media|r
+## Notes: Bloom Media Pack
+## Author: Wait
+## X-Curse-Packaged-Version: 1.0
+## X-Curse-Project-Name: Bloom Media
+## X-Curse-Project-ID: bloom-media
+## X-Category: audio-video
+## X-Credits: Wait
+## OptionalDeps: ElvUI
+## IconTexture: Interface\AddOns\BloomMedia\Icons\Bloom-minimal.tga
+
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+Libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua
+
+BloomMedia.lua
