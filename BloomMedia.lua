@@ -12,11 +12,11 @@ local MediaKey = {
 }
 
 local MediaPath = {
-	font	= [[Interface\AddOns\WaitMedia\Fonts\]],
-	sound	= [[Interface\AddOns\WaitMedia\Sounds\]],
-	emoji	= [[Interface\AddOns\WaitMedia\ChatEmojis\]],
-	logo	= [[Interface\AddOns\WaitMedia\ChatLogos\]],
-	texture	= [[Interface\AddOns\WaitMedia\Textures\]]
+	font	= [[Interface\AddOns\BloomMedia\Fonts\]],
+	sound	= [[Interface\AddOns\BloomMedia\Sounds\]],
+	emoji	= [[Interface\AddOns\BloomMedia\ChatEmojis\]],
+	logo	= [[Interface\AddOns\BloomMedia\ChatLogos\]],
+	texture	= [[Interface\AddOns\BloomMedia\Textures\]]
 }
 
 local function AddMedia(Type, File, Name, CustomType, Mask)
@@ -37,6 +37,7 @@ local function AddMedia(Type, File, Name, CustomType, Mask)
 					LSM:Register(name, nameKey, file, Mask)
 				end
 			else
+			    print("Registering", Type, nameKey, file)
 				LSM:Register(CustomType or Type, nameKey, file, Mask)
 			end
 		end
@@ -85,6 +86,15 @@ local sounds = {
 
 do
     for i, sound in ipairs(sounds) do
-    	AddMedia("sound", sound .. ".ogg", "|cFF1E90FF~ " .. sound .. "|r")
+    	AddMedia("sound", sound .. ".ogg", "" .. sound .. "")
     end
 end
+
+AddMedia("sound", "gn-girl-1.ogg", "goodnight girl 1")
+AddMedia("sound", "gn-girl-2.ogg", "goodnight girl 2")
+AddMedia("sound", "donz-breath.ogg", "breath donz")
+AddMedia("sound", "nishi-breath.ogg", "breath nishi")
+AddMedia("sound", "josh-breath.ogg", "breath josh")
+AddMedia("sound", "lorgok-noo.ogg", "sad boomkin")
+AddMedia("sound", "beans-wtf.ogg", "beans wtf")
+AddMedia("sound", "puuker.ogg", "puuker")
