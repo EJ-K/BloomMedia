@@ -37,7 +37,6 @@ local function AddMedia(Type, File, Name, CustomType, Mask)
 					LSM:Register(name, nameKey, file, Mask)
 				end
 			else
-			    print("Registering", Type, nameKey, file)
 				LSM:Register(CustomType or Type, nameKey, file, Mask)
 			end
 		end
